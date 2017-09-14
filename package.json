@@ -1,6 +1,6 @@
 {
   "name": "@kofile/redux-lenses",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.2",
   "description": "A set of utility functions for dealing with redux state via Ramda lenses",
   "main": "index.js",
   "author": "beardedtim <timiroberts@gmail.com>",
