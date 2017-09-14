@@ -1,6 +1,6 @@
 {
   "name": "@kofile/redux-lenses",
-  "version": "0.0.0-placeholder",
+  "version": "0.0.0-semantically-released",
   "description": "A set of utility functions for dealing with redux state via Ramda lenses",
   "main": "index.js",
   "author": "beardedtim <timiroberts@gmail.com>",
@@ -28,7 +28,7 @@
     "babel-eslint": "^8.0.0",
     "commitizen": "^2.9.6",
     "cz-cli": "^1.0.0",
-    "cz-emoji": "^0.2.0",
+    "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.3",
     "jest": "^21.1.0",
     "lint-staged": "^4.1.3",
@@ -39,7 +39,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "cz-emoji"
+      "path": "cz-conventional-changelog"
     }
   },
   "standard": {

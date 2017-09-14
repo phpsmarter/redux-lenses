@@ -1,5 +1,8 @@
 const R = require('ramda')
 
+const SET = 'set'
+const OVER = 'over'
+
 /**
  * Our helper functions for creating HandlerTuples
  *
@@ -12,9 +15,9 @@ const R = require('ramda')
  * @return {Object}
  */
 const set = lens => ({
-  as: value => [lens, R.always(value), 'set'],
-  with: setter => [lens, setter, 'set'],
-  using: setter => [lens, setter, 'over']
+  as: value => [lens, R.always(value), SET],
+  with: setter => [lens, setter, SET],
+  using: setter => [lens, setter, OVER]
 })
 
 /**
