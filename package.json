@@ -5,6 +5,11 @@
   "main": "index.js",
   "author": "beardedtim <timiroberts@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "redux",
+    "lenses"
+  ],
   "scripts": {
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "jest",
