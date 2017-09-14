@@ -13,7 +13,6 @@ script:
   - yarn lint
 after_success:
   - yarn semantic-release
-  - yarn coverage | npx coveralls
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
