@@ -27,3 +27,32 @@ const reducer = createReducer(handlers)
 
 export default createStore(reducer)
 ```
+
+## API
+
+_**set**_
+
+> lens -> SetterObject
+
+Takes in a lens to set a value at. Returns an object with 3 methods:
+
+* `with` : `setter -> ([lens, setter, 'set'])`
+    - `setter` is a function that expects `(action, state)` and returns a new value for the `lens`
+* `as` : `value -> ([lens, setter, 'set'])`
+    - `value` is the value to set at that lens
+* `using` : `setter -> ([lens, setter, 'over'])`
+    - `seter` 0s a function that expects `(action, state)` and returns a function expeting `oldValue` of the lens and returns a new value for the lens.
+
+_**createReducer**_
+
+> handlers -> (state, action) -> state
+
+Takes in an object of `{ [actionTypes]: [...([lens, setter, methodName])] }` and returns a function of `(state, action) -> nextState`.
+
+## Tests
+
+```
+$ yarn test
+```
+
+All tests are held inside of `modules/index.test.js`
