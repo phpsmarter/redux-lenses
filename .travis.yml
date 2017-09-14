@@ -1,0 +1,19 @@
+
+language: node_js
+dist: trusty
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
+node_js:
+  - '8'
+script:
+  - yarn test
+  - yarn lint
+after_success:
+  - yarn semantic-release
+  - yarn coverage | npx coveralls
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
