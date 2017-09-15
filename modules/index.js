@@ -32,13 +32,15 @@ const set = lens => ({
 const createReducer = handlers => (state, action) => {
   const { type } = action
 
-  const actionHandlers = R.propOr([], type, handlers)
+  if (!R.has(type, handlers)) {
+    return state
+  }
+
+  const actionHandlers = handlers[type]
 
   return actionHandlers.reduce(
-    (nextState, [lens, setter, method]) =>
-      R.has(method, R)
-        ? R[method](lens, setter(action, nextState), nextState)
-        : nextState,
+    (nextState, [lens, fn, method]) =>
+      R[method](lens, fn(action, nextState), nextState),
     state
   )
 }
