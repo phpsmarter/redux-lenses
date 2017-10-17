@@ -36,12 +36,12 @@ _**set**_
 
 Takes in a lens to set a value at. Returns an object with 3 methods:
 
-* `with` : `setter -> ([lens, setter, 'set'])`
-    - `setter` is a function that expects `(action, state)` and returns a new value for the `lens`
 * `as` : `value -> ([lens, setter, 'set'])`
     - `value` is the value to set at that lens
+* `with` : `setter -> ([lens, setter, 'set'])`
+    - `setter` is a function that expects `(action, state)` and returns a new value for the `lens`
 * `using` : `setter -> ([lens, setter, 'over'])`
-    - `seter` 0s a function that expects `(action, state)` and returns a function expeting `oldValue` of the lens and returns a new value for the lens.
+    - `setter` 0s a function that expects `(action, state)` and returns a function expeting `oldValue` of the lens and returns a new value for the lens.
 
 _**createReducer**_
 
