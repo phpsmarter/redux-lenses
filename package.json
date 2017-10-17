@@ -14,7 +14,8 @@
   "keywords": [
     "react",
     "redux",
-    "lenses"
+    "lenses",
+    "functional"
   ],
   "scripts": {
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
